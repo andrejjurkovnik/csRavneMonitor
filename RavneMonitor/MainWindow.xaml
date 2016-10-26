@@ -9,7 +9,7 @@
     <Grid>
         <!--Menu bar-->
         <DockPanel>
-            <Menu x:Name="MenuBar" DockPanel.Dock="Top">
+            <Menu x:Name="MenuBar" DockPanel.Dock="Top" FontSize="16" Background="White">
                 <MenuItem Header="_File">
                     <MenuItem Header="_Open"/>
                     <MenuItem Header="_Close"/>
@@ -23,7 +23,7 @@
         </DockPanel>
 
         <!--Tab controls-->
-        <TabControl x:Name="tabGrid" HorizontalAlignment="Stretch" Height="auto" Margin="10,30,10,10" VerticalAlignment="Stretch" Width="auto">
+        <TabControl x:Name="tabGrid" HorizontalAlignment="Stretch" Height="auto" Margin="10,40,10,10" VerticalAlignment="Stretch" Width="auto">
             <TabItem Header="Live data" FontSize="16">
                 <TabItem.Background>
                     <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
