@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RavneMonitor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="1251.975">
+        Title="Watchy" Height="350" Width="1251.975">
     <Grid>
         <!--Menu bar-->
         <DockPanel>
@@ -16,7 +16,7 @@
                     <MenuItem Header="_Save"/>
                 </MenuItem>
                 <MenuItem Header= "_Settings">
-                    <MenuItem Header="_Connection Settings" Click="MenuItem_Click_1"/>
+                    <MenuItem Header="_Connection Settings"/>
                 </MenuItem>
             </Menu>
             <StackPanel></StackPanel>
@@ -32,7 +32,7 @@
                     </LinearGradientBrush>
                 </TabItem.Background>
                 <Grid Background="White">
-                    <GroupBox x:Name="gbSenzorGroup1" Header="Senzor group 1" Margin="10,10,10,134">
+                    <GroupBox x:Name="gbSenzorGroup1" Header="Senzor group 1" Margin="10,10,10,0" Height="102" VerticalAlignment="Top">
                         <DataGrid x:Name="dataGrid" Margin="0,0,-2,-1"/>
                     </GroupBox>
                 </Grid>
@@ -52,7 +52,7 @@
                     <Button x:Name="buttonGetDBData" Content="Get the data" HorizontalAlignment="Left" Margin="281,3,0,0" VerticalAlignment="Top" Width="118" Height="28" Grid.Column="1"/>
                     <Label x:Name="label" Content="Select senzor group:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Grid.ColumnSpan="2"/>
                     <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="144,4,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
-                    <DataGrid x:Name="dataGrid1" Margin="0,36,0,0" Grid.ColumnSpan="2"/>
+                    <DataGrid x:Name="dataGrid1" HorizontalAlignment="Left" Margin="0,36,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Height="149" Width="859"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Camera image" FontSize="16">
