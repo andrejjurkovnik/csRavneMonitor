@@ -5,8 +5,66 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RavneMonitor"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="1251.975">
     <Grid>
-        
+        <!--Menu bar-->
+        <DockPanel>
+            <Menu x:Name="MenuBar" DockPanel.Dock="Top">
+                <MenuItem Header="_File">
+                    <MenuItem Header="_Open"/>
+                    <MenuItem Header="_Close"/>
+                    <MenuItem Header="_Save"/>
+                </MenuItem>
+                <MenuItem Header= "_Settings">
+                    <MenuItem Header="_Connection Settings" Click="MenuItem_Click_1"/>
+                </MenuItem>
+            </Menu>
+            <StackPanel></StackPanel>
+        </DockPanel>
+
+        <!--Tab controls-->
+        <TabControl x:Name="tabGrid" HorizontalAlignment="Stretch" Height="auto" Margin="10,30,10,10" VerticalAlignment="Stretch" Width="auto">
+            <TabItem Header="Live data" FontSize="16">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="White">
+                    <GroupBox x:Name="gbSenzorGroup1" Header="Senzor group 1" Margin="10,10,10,134">
+                        <DataGrid x:Name="dataGrid" Margin="0,0,-2,-1"/>
+                    </GroupBox>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Database Viewer" FontSize="16">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="White">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="20*"/>
+                        <ColumnDefinition Width="471*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="buttonGetDBData" Content="Get the data" HorizontalAlignment="Left" Margin="281,3,0,0" VerticalAlignment="Top" Width="118" Height="28" Grid.Column="1"/>
+                    <Label x:Name="label" Content="Select senzor group:" HorizontalAlignment="Left" VerticalAlignment="Top" Width="159" Grid.ColumnSpan="2"/>
+                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="144,4,0,0" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <DataGrid x:Name="dataGrid1" Margin="0,36,0,0" Grid.ColumnSpan="2"/>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Camera image" FontSize="16">
+                <TabItem.Background>
+                    <LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+                        <GradientStop Color="#FFF0F0F0" Offset="0"/>
+                        <GradientStop Color="White" Offset="1"/>
+                    </LinearGradientBrush>
+                </TabItem.Background>
+                <Grid Background="White"/>
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>
